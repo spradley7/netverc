@@ -12,7 +12,7 @@ let config = {
 let blockedSites = ['www.chase.com'] // accessing to chase.com was reported by google
 
 
-config.serverName = netverc48.onrender.com
+config.serverName = 'netverc48.onrender.com'
 
 config.serverName = config.serverName.replace(/https?:\/\//g, '')
 console.log(`config.serverName:${config.serverName}`)
