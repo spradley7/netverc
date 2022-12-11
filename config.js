@@ -11,9 +11,9 @@ let config = {
 }
 let blockedSites = ['www.chase.com'] // accessing to chase.com was reported by google
 
-if (process.env.herokuAddr) {
-    config.serverName = process.env.herokuAddr
-}
+
+config.serverName = netverc48.onrender.com
+
 config.serverName = config.serverName.replace(/https?:\/\//g, '')
 console.log(`config.serverName:${config.serverName}`)
 if (process.env.localFlag === 'true') {
