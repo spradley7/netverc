@@ -7,12 +7,14 @@ const {CookieAccessInfo, CookieJar, Cookie} = cookiejar
 
 let config = {
     httpprefix: 'https', port: 443,
-    serverName: 'siteproxy.netptop.workers.dev',
+    serverName: 'netverc48.onrender.com',
 }
 let blockedSites = ['www.chase.com'] // accessing to chase.com was reported by google
 
 
-config.serverName = 'netverc48.onrender.com'
+if (process.env.herokuAddr) {
+    config.serverName = process.env.herokuAddr
+}
 
 config.serverName = config.serverName.replace(/https?:\/\//g, '')
 console.log(`config.serverName:${config.serverName}`)
